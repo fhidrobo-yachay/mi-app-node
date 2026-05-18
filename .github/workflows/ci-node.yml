@@ -2,12 +2,9 @@ name: CI - Node.js
 
 on:
   push:
-    branches: [master, develop]
+    branches: [main, master, develop]
   pull_request:
-    branches: [master]
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    branches: [main, master]
 
 jobs:
   build-and-test:
@@ -15,14 +12,14 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [22]
+        node-version: [22, 24]
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
