@@ -4,13 +4,13 @@ const app = express();
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hola desde Node.js y GitHub Actions',
+    message: 'Hola desde Node.js con GitHub Actions en Render ',
   });
 });
 
 app.get('/health', (req, res) => {
   res.status(200).json({
-    status: 'ok',
+    status: 'ok. Todo está funcionando correctamente',
   });
 });
 
