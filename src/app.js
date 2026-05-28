@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hola desde Node.js con GitHub Actions en Render (27 de Mayo de 2026)',
+    message: 'Hola desde Node.js con GitHub Actions en Render (27 de Mayo de 2026 V2)',
   });
 });
 
