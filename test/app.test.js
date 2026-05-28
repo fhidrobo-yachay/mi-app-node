@@ -6,7 +6,7 @@ test('GET / debe devolver un mensaje', async () => {
 
   expect(response.statusCode).toBe(200);
   expect(response.body.message.trim()).toBe(
-    'Hola desde Node.js con GitHub Actions en Render (27 de Mayo de 2026)'
+    'Hola desde Node.js con GitHub Actions en Render (27 de Mayo de 2026 V2)'
   );
 });
 
